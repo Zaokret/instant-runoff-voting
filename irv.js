@@ -155,9 +155,9 @@ while (!winner) {
     voters
   );
 
-  leaderboard = nextRoundLeaderboard;
   voters = nextRoundVoters;
-  winner = findWinner(createLeaderboard(leaderboard, voters));
+  leaderboard = createLeaderboard(nextRoundLeaderboard, voters);
+  winner = findWinner(leaderboard);
 }
 
 console.log(winner);
